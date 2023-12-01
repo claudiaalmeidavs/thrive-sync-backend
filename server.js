@@ -8,7 +8,7 @@ const server = express();
 
 server.use(
   cors({
-    origin: "https://thrivesync.netlify.app/",
+    origin: "http://localhost:3000",
   })
 );
 
