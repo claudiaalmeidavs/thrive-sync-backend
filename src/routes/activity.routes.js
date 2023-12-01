@@ -14,6 +14,7 @@ activityRouter.get("/:id", activityController.getActivityById)
 // Route to post new activity
 activityRouter.post("/", activityController.postNewActivity)
 
+// Route to delete activity
 activityRouter.delete("/:id", activityController.deleteActivity)
 
 module.exports = activityRouter;

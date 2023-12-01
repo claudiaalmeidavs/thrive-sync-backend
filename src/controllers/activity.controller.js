@@ -21,7 +21,6 @@ const updateActivity = (req, res) => {
   Activity.updateStatus(id, activity_status)
   .then((result) => {
       if (result) {
-        console.log(result)
         res.status(200).json(result);
       } else {
         res.status(404).send("Activity not found.");
@@ -53,7 +52,6 @@ const postNewActivity = (req, res) => {
   Activity.createActivity(req.body)
   .then((result) => {
       if (result) {
-        console.log(result)
         res.status(201).json(result);
       } else {
         res.status(404).send("Activity not found.");
@@ -65,12 +63,11 @@ const postNewActivity = (req, res) => {
     });
 };
 
-deleteActivity = (req, res) => {
+const deleteActivity = (req, res) => {
   const { id } = req.params;
   Activity.del(id)
   .then((result) => {
     if (result) {
-      console.log(result)
       res.status(200).json(result);
     } else {
       res.status(404).send("Activity not found.");
